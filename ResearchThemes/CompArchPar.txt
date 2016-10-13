@@ -1,0 +1,10 @@
+Paragraph About Computer Architecture
+
+Computer architecture is essentially a blueprint for the software and hardware, and how they all interact together. This includes the functionality, organisation, and implementation of computer systems.
+Computer Architecture is the building blocks to the entire It industry. If new technologies emerge then computer architecture will have to change, resulting in both hardware and software changes.
+
+References
+
+www.techopedia.com/defintion/26757/computer-architecture
+www.wikipedia.org/wiki/Computer_architecture
+http://cra.org/ccc/wp-content/uploads/sites/2/2015/05/Computer_Architecture.pdf
