@@ -1,11 +1,13 @@
 public class painting {
 	
-	private String direction;
-	private String artist;
-	private String title;
-	private int year;
-	private int height;
-	private int width;
+	private String direction = "on the left";
+	private String artist = "Olga Bonznanska";
+	private String title = "Girl with Chrysanthemums";
+	private int year = 1894;
+	private double height = 88.5;
+	private double width = 69.0;
+
+	/*Hardcoded examples for the example runs */
 
 	public void setDirec(String direction) {
 		this.direction = direction;
@@ -43,20 +45,20 @@ public class painting {
 	}
 
 				
-	public void setHeight(int height) {
+	public void setHeight(double height) {
 		this.height = height;
 	}
 
-	public int getHeight() {
+	public double getHeight() {
 		 return height;
 	}
 
 
-	public void setWidth(int width) {
+	public void setWidth(double width) {
 		this.width = width;
 	}
 
-	public int getWidth() {
+	public double getWidth() {
 		 return width;
 	}
 }
