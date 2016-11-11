@@ -8,15 +8,15 @@ class statask {
 
 		Scanner sc = new Scanner(System.in);
 
-		String usr_inp = sc.nextLine();
-	    int question = stopReturn(usr_inp);
-		String station = stationName(question);
+		String usr_inp = sc.nextLine(); // user input station name they want the zone of
+	    int question = stopReturn(usr_inp); // create an integer question and give it the value of the method stopReturn with argument the station name
+		String station = stationName(question); // create string station and give it the value of method stationName with argument question 
 
-		System.out.println(station + " is in zone " + question);
+		System.out.println(station + " is in zone " + question); // output station name and corresponding
 		System.exit(0);
 	}	
 
-	public static int stopReturn(String var1) {
+	public static int stopReturn(String var1) { // return station number by calling methods isIt(station name) and equating them with values they should be returning if true
 	 
 		String station = var1;	
 		int x;
@@ -32,7 +32,6 @@ class statask {
 		} else if (isItBuckHill(station) == 5) {
 			x = 5;
 		} else {
-			System.out.println("Didnt work");
 			x = 0;
 		}
 		return x;
@@ -40,7 +39,7 @@ class statask {
 
 	public static String stationName(int var) {
 
-		int stationNum = var;
+		int stationNum = var; // if variable var = 1,2,3..etc defaults to invalid option
 		String station_name;
 		switch (stationNum) {
 			case 1: station_name = "Aldgate East";
@@ -55,10 +54,10 @@ class statask {
 					break;
 			default: station_name = "Invalid option";
 		}
-		return station_name;
+		return station_name; // return whatever breaks 
 	}
 
-	public static int isItAldgateEast(String vara) {
+	public static int isItAldgateEast(String vara) {  // methods to test if user input the right station name and what he input
 
 		if (vara.equals( "Aldgate East")) {
 			return 1;
