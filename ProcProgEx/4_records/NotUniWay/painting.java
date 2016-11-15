@@ -1,13 +1,18 @@
 public class painting {
 	
-	private String direction = "on the left";
-	private String artist = "Olga Bonznanska";
-	private String title = "Girl with Chrysanthemums";
-	private int year = 1894;
-	private double height = 88.5;
-	private double width = 69.0;
+	int painting_num = 1;
+	private String direction = "Insert direction";
+	private String artist = "Insert Artist";
+	private String title = "Insert Title";
+	private int year = 000;
+	private double height = 00.0;
+	private double width = 00.0;
 
 	/*Hardcoded examples for the example runs */
+
+	public int getPainting(){
+		return painting_num;
+	}
 
 	public void setDirec(String direction) {
 		this.direction = direction;
@@ -16,8 +21,8 @@ public class painting {
 	public String getDirec() {
 		 return direction;
 	}
-
-
+	
+	
 	public void setArtist(String artist) {
 		this.artist = artist;
 	}
