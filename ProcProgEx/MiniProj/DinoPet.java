@@ -1,14 +1,15 @@
-import java.util.*;
- 
-class DinoPet{
+public class DinoPet {
+    public String name;
+    public int age, hunger, thirst;
+    public boolean ishungry = false;
+    public boolean isthirsty = false;
 
-	public static void main (String[] p) {
-	
-	}
-
-	public static boolean isHungry(int param) {
-		
-	}
-	
-	public static int 
+    public DinoPet( String name, int age, int hunger, int thirst ) 
+    {
+        name = name;
+        age = age;
+        hunger = hunger;
+        thirst = thirst;
+        
+    }   
 }
