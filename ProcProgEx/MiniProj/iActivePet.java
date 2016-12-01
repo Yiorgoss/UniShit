@@ -6,26 +6,26 @@ public class iActivePet {
     public static ArrayList<DinoPet> pausedPets = new ArrayList<DinoPet>(); 
     
     public static void main( String[] p ) {
-       
         int[] newStats = new int[]{ 0, 10, 10 }; 
-        try {   
+       
+         try {   
             inFile( "PausedPets.txt" );
         } catch ( IOException ioe ) {  
             // read more on ioexception
         }
-
+        
+        unPausePet( "name" );
        // String currentPet = namePet();
        // createPet( newStats, currentPet );
 
         //gameStart(hard, currentPet );    
 
         for( DinoPet pet : pausedPets ) {
-            for( int i=0; i<2; i++) {
-                int retval = pet.dinoStats[i]; 
-                System.out.println(retval);
-            }
+            int[] var = new int[3];
+            var = pet.getDinoStats();
+            String nome = pet.name;
+            String what = pet.getName();
         }
-
 
        // int[] leadersorted = new int[n];
        // leadersorted = leaderSort( leadersorted );
@@ -37,54 +37,89 @@ public class iActivePet {
  
     
     }        
-            
-    public static void gameStart( int[] array, String petName )
+    public static void unPausePet( String param ) 
     {
-            
-        int age = array[0];
-        int hunger = array[1];
-        int thirst = array[2]; 
-   
+        String name = param;
+        for( DinoPet pet : pausedPets )
+        {
+            if( pet.name.equals( name ) ) 
+            {
+                int[] dino_stats = new int[2];
+                dino_stats = pet.dinoStats;
+                createGame( dino_stats, pet.name );
+            }
+        }
+    } 
+    public static void createGame( int[] array, String name )
+    {
         Scanner sc = new Scanner( System.in );
-        int counter = 0;
+        int[] dinostats = new int[3];
+        dinostats = array;
         String instruction = "";
-
+     
+        int age = dinostats[0];
+        int hunger = dinostats[1];
+        int thirst = dinostats[2];
         
-
-        while ( true ) {
+        boolean istrue = true;
+        while( istrue = true ) {
             
             System.out.println( "What would you like to do?" );
             instruction = sc.nextLine();
-            
-            if ( instruction.equals( "END" ) ) { break; } 
+            int random = ( int )( Math.random() * 5 );       
+
+            hunger--;
+            thirst--;;
+            age++;
+
+            if( instruction.equals( "END" ) ) { istrue = false; } 
             
 
             if( instruction.equals( "EAT" ) ) {
-                hunger += 2;
+                hunger += random; 
+                System.out.println( "Hunger:  "+ hunger +"[+"+ random +"]" );
+                System.out.println( "Age:  "+ age );
+            //    continue;
             } else if( instruction.equals( "DRINK" ) ) {
-                thirst += 2;
+                thirst += random;
+                System.out.println( "Thirst:  "+ thirst +"[+"+ random +"]" );
+                System.out.println( "Age:  "+ age );
+            //      continue;
+            } else if( instruction.equals( "SAVE" ) ) {
+                int[] dino_stats = new int[] { age, hunger, thirst };
+         //       savePet( name, dino_stats );
+                 
+         //       break;
             } else {
-                System.out.println( "Sorry command not recognised. Available commands are EAT, DRINK, END" ); 
+                System.out.println( "Sorry command not recognised. Available commands are EAT, DRINK, END" );
+                continue; 
             }
-            
-            hunger = energyDrain( hunger, counter );
-            thirst = energyDrain( thirst, counter );                     
-            counter++;
+             
         }
-        //importSavedPet();
         //savePet();
         //checkHighScore();
-        
     }
- 
-    public static int energyDrain( int num, int counter ) {
-        int percentenergy = num / counter;
-        return percentenergy;
-    }
-
+    public static void savePet( String name, int[] dinostats )
+    {
+        int[] dino_stats = new int[3];
+        dinostats = dino_stats;
+    
+        for( DinoPet pet : pausedPets )
+        {
+            if( pet.name.equals( name ) ) 
+            {
+                pet.dinoStats = dino_stats;
+            }
+        }
+        /*try {
+            outFile( "PausedPets.txt" );
+            System.out.println( "SAVED" );
+        } catch( IOException ioe ) {
+        }*/
+    }   
     public static void createPet( int[] array, String name ) 
     {
-        int[] dinoStats = new int[0];
+        int[] dinoStats = new int[array.length];
         dinoStats = array; 
         pausedPets.add( new DinoPet( dinoStats, name ) );
     }
@@ -94,32 +129,44 @@ public class iActivePet {
         File outFile = new File ( textfile );
         FileWriter fWriter = new FileWriter ( outFile, true );
         PrintWriter pWriter = new PrintWriter ( fWriter );
-        pWriter.println( "whatever2" );
+        for( DinoPet pet : pausedPets )
+        {
+            int[] dino_stats = new int[3];
+            dino_stats = pet.dinoStats;
+            String name = pet.name;
+
+            pWriter.println( dino_stats[0] );
+            pWriter.println( dino_stats[1] );
+            pWriter.println( dino_stats[2] ); 
+            pWriter.println( name );    
+        }
         pWriter.close();
     }
     public static void inFile( String textfile ) throws java.io.IOException 
     {
         File inFile = new File ( textfile );
         
+        int[] intarray = new int[3];
+        int counter = 0;
         Scanner sc = new Scanner ( inFile );
+        
+
         while ( sc.hasNextLine( ) ) 
         {
-            int[] intarray = new int[3];
-            int counter = 0;
             String strInp = sc.nextLine( );
             try
             {
                 int intInp = Integer.parseInt( strInp );
                 intarray[counter] = intInp;
-                for(int i=0;i<2;i++) {System.out.println( intarray[i] );}    
-            }
+                //System.out.println(intInp); 
+             }
             catch( NumberFormatException e ) 
             {
-            //    for(int i=0;i<2;i++) {System.out.println( intarray[i] );}    
-                createPet( intarray, strInp );         
+                int[] test = intarray.clone();
+                createPet( test, strInp ); 
                 continue;
             } 
-            counter = (counter + 1) % 3;
+            counter = ( counter + 1) % 3;
         }
         
     }
@@ -142,6 +189,7 @@ public class iActivePet {
         return array;
     }
 
+    
     public static String namePet() {
         String name;
         Scanner sc = new Scanner(System.in);
@@ -153,16 +201,24 @@ public class iActivePet {
 
 class DinoPet {
 
-    public String name;
-    public int[] dinoStats = new int[3];
-    public boolean ishungry = false;
-    public boolean isthirsty = false;
+    String name;
+    int[] dinoStats = new int[3]; // dino stats are age hunger thirst in that order
+    boolean ishungry = false;
+    boolean isthirsty = false;
 
-    public DinoPet( int[] array, String name ) 
+    public DinoPet( int[] array, String param ) 
     {
-        name = name;
+        name = param;
         dinoStats = array;
     }   
-
-
+    
+    public int[] getDinoStats( ) 
+    {
+        return this.dinoStats;
+    }
+    
+    public String getName( ) 
+    {
+        return this.name;
+    }
 }
