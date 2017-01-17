@@ -17,7 +17,7 @@ class HowMany {
 		Scanner sc = new Scanner(System.in);
 		
         int[] popul_arr = new int[5];
-		int lowest = 1000000000;
+		int lowest = Integer.MAX_VALUE;
 		int most_enda = 0;
         int n = animal_arr.length;
         for( int i=0; i<=n-1; i++ ){ //

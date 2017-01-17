@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 class HowMany {
 
+    final public String END = "end";
 	public static void main( String[] p ){
 		Scanner sc = new Scanner(System.in);
 		String usr_str = "";
@@ -21,7 +22,7 @@ class HowMany {
         	System.out.println( "Which bird have you seen?" );
 			usr_str = sc.nextLine();
 			
-			if(usr_str.equals( "end" ) ){
+			if(usr_str.equals( END ) ){
 				System.out.println( "You saw "+ mostcommon +" "+ commonbird +"s" );
 				break;
 			} else {
