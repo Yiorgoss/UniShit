@@ -1,29 +1,15 @@
-class TestAccelerate {
+public class TestAccelerate {
+
     public static void main( String[] args ) {
-        SportsCar sport1 = new SportsCar();
-        SportsCar sport2 = new SportsCar();
-        SportsCar sport3 = new SportsCar();
-        Van van = new Van();
+        SportsCar sc1 = new SportsCar( 1500, 200, 0.5, 220 );
+        SportsCar sc2 = new SportsCar( 1000, 100, 0.5, 170 );
+        SportsCar sc3 = new SportsCar( 1100.2, 135, 0.5, 173 );
 
-            
-        sport1.setHorsePower(200);
-        sport2.setHorsePower(100);
-        sport3.setHorsePower(135);
-        van.setHorsePower(100);
-
-        sport1.setWeight(1500);
-        sport2.setWeight(1000);  
-        sport3.setWeight(1100.2);
-        van.setWeight(3500);
+        Van van = new Van( 3500, 100, 0.9, 160.4 );
         
-
-        van.setCarryWeight(160.4);
-        van.setAerodynamics(0.9);
-        
-        System.out.println( "Accel sports car 1 = "+ sport1.acceleration() );    
-        System.out.println( "Accel sports car 2 = "+ sport2.acceleration() );
-        System.out.println( "Accel sports car 3 = "+ sport3.acceleration() );
-        System.out.println( "Accel van = "+ van.acceleration() );
+        System.out.println( "Acceleration for sportscar 1 = "+ sc1.acceleration() );
+        System.out.println( "Acceleration for sportscar 2 = "+ sc2.acceleration() );
+        System.out.println( "Acceleration for sportscar 3 = "+ sc3.acceleration() );
+        System.out.println( "Acceleration for Van = "+ van.acceleration() );
     }
-        
 }
