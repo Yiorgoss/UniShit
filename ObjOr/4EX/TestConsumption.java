@@ -1,35 +1,16 @@
-import java.util.*;
-
-class TestConsumption {
-    
+public class TestConsumption {
     public static void main( String[] args ) {
         SportsCar[] sc = new SportsCar[3];
         
-        for( int i = 0; i < 3; i++ ){
-            sc[i] = new SportsCar();
-        }
-
-        sc[0].setHorsePower(200);
-        sc[1].setHorsePower(100);
-        sc[2].setHorsePower(135);
-
-        sc[0].setWeight(1500);
-        sc[1].setWeight(1000);  
-        sc[2].setWeight(1100.2);
-
-        sc[0].setTopSpeed(220);
-        sc[1].setTopSpeed(170);
-        sc[2].setTopSpeed(173);
+        sc[0]= new SportsCar( 1500, 200, 0.5, 220 );
+        sc[1]= new SportsCar( 1000, 100, 0.5, 170 );
+        sc[2]= new SportsCar( 1100.2, 135, 0.5, 173 ); 
         
-        int i = 1;
-        for( SportsCar car : sc ) {
-            double fuelconsumption = FuelConsumption(car);
-            System.out.println( "SportsCar "+ i +"'s fuel consumption is "+ fuelconsumption );
-            i++;
-        }
-        
+         System.out.println( "Fuel consumption for sportscar 1 "+ FuelConsumption( sc[0] ) );
+        System.out.println( "Fuel consumption for sportscar 2 "+ FuelConsumption( sc[1] ) );
+        System.out.println( "Fuel consumption for sportscar 3 "+ FuelConsumption( sc[2] ) );
     }
     public static double FuelConsumption( SportsCar sc ) {
-        return( ( 1000+( sc.getWeight()/5 ) )*( sc.getTopSpeed()/100 )*( sc.getAerodynamics() * sc.getHorsePower() )/10000 ); 
+        return( ( 1000+( ( sc.getWeight()/5) ) )*( sc.getTopSpeed()/100 )*( sc.getAerodynamics() * sc.getHorsePower() )/10000 ); 
     }
 }
