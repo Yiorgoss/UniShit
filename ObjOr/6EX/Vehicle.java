@@ -1,23 +1,19 @@
-import java.awt.*;
+public class Vehicle {
+    protected static double weight;
+    protected static double horsepower;
+    protected static double aerodynamics;
 
-class Vehicle {
-    
-    private double horsepower;
-    private double aerodynamics;
-    private double weight;
-
-    public static void main( String[] args ) {
+    Vehicle( double weight, double horsepower, double aerodynamics ) {
+        this.weight = weight;
+        this.horsepower = horsepower;
+        this.aerodynamics = aerodynamics;
     }
-
-    public double getHorsePower(){ return this.horsepower; }
-    public double getAerodynamics(){ return this.aerodynamics; }
-    public double getWeight(){ return this.weight; }
-
-    public void setHorsePower( double var ){ this.horsepower = var; }
-    public void setAerodynamics( double var ){ this.aerodynamics = var; }
-    public void setWeight( double var ){ this.weight = var; }   
     
-    public double acceleration() {
-        return ( ( 100/horsepower )*( aerodynamics )*( weight/100 ) );
+    public static double getWeight( ) { return weight; }
+    public static double getHorsePower( ) { return horsepower; }
+    public static double getAerodynamics( ) { return aerodynamics; }
+    public static double acceleration() {
+        return( (100/horsepower )*(aerodynamics )*(weight/100) );
     }
-}   
+}
+ 

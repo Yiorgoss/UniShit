@@ -1,13 +1,19 @@
-class Van extends Vehicle {
-    private double carryweight;
-
-    public static void main( String[] args ) {
+public class Van extends Vehicle {
+    protected static double carryweight;
+    protected static double topspeed;
+    
+    Van( double weight, double horsepower, double aerodynamics, double carryweight, double topspeed ) {
         
-    }
-    public double acceleration() {
-        return ( ( 100/getHorsePower() )*( getAerodynamics()/2 )*( ( getWeight() + getCarryWeight() )/100 ) );
-        // how exactly does an increase in weight lead to an increase in acceleration??
+        super( weight, horsepower, aerodynamics );
+        this.carryweight = carryweight;
+        this.topspeed = topspeed;
     }
     public double getCarryWeight() { return this.carryweight; }
-    public void setCarryWeight( double arg ) { this.carryweight = arg; }
+    public static double acceleration() { 
+        return ( (100/horsepower) )*(getAerodynamics()/2)*( (getWeight() + carryweight )/100) ;
+    }
+    public static double consumption() {
+                    return( ( 1000+( ( (weight + carryweight)/5) ) )*( topspeed/100 )*( aerodynamics * horsepower )/10000 ); 
+    }
+
 }

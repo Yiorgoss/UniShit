@@ -1,14 +1,14 @@
-class SportsCar extends Vehicle {
+public class SportsCar extends Vehicle {
+    protected static double topspeed;
+    protected static double carryweight;
     
-    private double topspeed;
-    
-    public static void main( String[] args ) {
-    
-    }
-        
-    public SportsCar() {
-        this.setAerodynamics(0.5);
+    SportsCar( double weight, double horsepower, double aerodynamics, double topspeed, double carryweight ) {
+        super( weight, horsepower, aerodynamics );
+        this.topspeed = topspeed;
+        this.carryweight = carryweight;
     }
     public double getTopSpeed( ) { return this.topspeed; }
-    public void setTopSpeed( double arg ) { this.topspeed = arg; }
+    public static double consumption() {
+        return( ( 1000+( ( weight/5) ) )*( topspeed/100 )*( aerodynamics * horsepower )/10000 ); 
+    }
 }
