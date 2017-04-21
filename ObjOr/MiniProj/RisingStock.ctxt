@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=name\ ask\ bid\ fdchange
+comment0.target=RisingStock(java.lang.String,\ double,\ double,\ double)
+comment1.params=
+comment1.target=boolean\ getIsRising()
+numComments=2
