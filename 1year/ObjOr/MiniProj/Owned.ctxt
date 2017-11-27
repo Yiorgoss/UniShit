@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=name\ amount
+comment0.target=Owned(java.lang.String,\ int)
+comment1.params=
+comment1.target=java.lang.String\ getName()
+comment2.params=
+comment2.target=int\ getAmount()
+comment3.params=amount
+comment3.target=void\ addAmount(int)
+comment4.params=amount
+comment4.target=void\ sellAmount(int)
+numComments=5

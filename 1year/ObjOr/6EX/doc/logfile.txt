@@ -1,0 +1,35 @@
+Class documentation
+<---- javadoc command: ---->
+/private/var/folders/ny/mwqwt47s4nq4_yj_ps0h8lk00000gn/T/AppTranslocation/0F8F0F52-8849-4C70-AF99-A7F45CC40BA5/d/BlueJ.app/Contents/JDK/Home/bin/javadoc
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+/private/var/folders/ny/mwqwt47s4nq4_yj_ps0h8lk00000gn/T/AppTranslocation/0F8F0F52-8849-4C70-AF99-A7F45CC40BA5/d/BlueJ.app/Contents/Resources/Java/bluejcore.jar:/private/var/folders/ny/mwqwt47s4nq4_yj_ps0h8lk00000gn/T/AppTranslocation/0F8F0F52-8849-4C70-AF99-A7F45CC40BA5/d/BlueJ.app/Contents/Resources/Java/junit-4.8.2.jar:/private/var/folders/ny/mwqwt47s4nq4_yj_ps0h8lk00000gn/T/AppTranslocation/0F8F0F52-8849-4C70-AF99-A7F45CC40BA5/d/BlueJ.app/Contents/Resources/Java/userlib/pi4j-core.jar:/private/var/folders/ny/mwqwt47s4nq4_yj_ps0h8lk00000gn/T/AppTranslocation/0F8F0F52-8849-4C70-AF99-A7F45CC40BA5/d/BlueJ.app/Contents/Resources/Java/userlib/pi4j-device.jar:/private/var/folders/ny/mwqwt47s4nq4_yj_ps0h8lk00000gn/T/AppTranslocation/0F8F0F52-8849-4C70-AF99-A7F45CC40BA5/d/BlueJ.app/Contents/Resources/Java/userlib/pi4j-gpio-extension.jar:/private/var/folders/ny/mwqwt47s4nq4_yj_ps0h8lk00000gn/T/AppTranslocation/0F8F0F52-8849-4C70-AF99-A7F45CC40BA5/d/BlueJ.app/Contents/Resources/Java/userlib/pi4j-service.jar:/Users/squanchyjr/UniShit/ObjOr/6EX
+-d
+/Users/squanchyjr/UniShit/ObjOr/6EX/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+/private/var/folders/ny/mwqwt47s4nq4_yj_ps0h8lk00000gn/T/AppTranslocation/0F8F0F52-8849-4C70-AF99-A7F45CC40BA5/d/BlueJ.app/Contents/Resources/Java/bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+/Users/squanchyjr/UniShit/ObjOr/6EX/TestAccelerate.java
+<---- end of javadoc command ---->
+Loading source file /Users/squanchyjr/UniShit/ObjOr/6EX/TestAccelerate.java...
+/Users/squanchyjr/UniShit/ObjOr/6EX/TestAccelerate.java:23: error: illegal start of expression
+        private Button testaccel;
+        ^
+/Users/squanchyjr/UniShit/ObjOr/6EX/TestAccelerate.java:24: error: illegal start of expression
+        private Button testconsump;
+        ^
+2 errors

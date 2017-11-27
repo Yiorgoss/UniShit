@@ -1,0 +1,21 @@
+Paragraph About Computer Architecture
+
+Computer architecture is essentially a blueprint for the software and hardware, and how they all interact together.
+This includes the functionality, organisation, and implementation of computer systems.
+Computer Architecture is the building blocks to the entire It industry.
+If new technologies emerge then computer architecture will have to change, resulting in both hardware and software changes.
+
+
+Computer architecture is essentially a blueprint for the hardware and software, how they all interact together mainly. This includes functionality, organisation and implementation of computers.[3] 
+Instruction Set Archictecure(ISA) is a subset of computer architecture based around the CPU. It is the embeddd programming language of the CPU and define's the CPU's functions and capabilities based on what programming it can perform or process.[1]
+In more laymens terms it functions more like an interface in which to "talk" to the hardware components through software. As well as holding the current version of operations, modes and storage locations that the hardware supports.[2]
+The two main types of instruction sets implemented in commercial computers,are called complex instruction set computer(CISC) and reduced instruction set computer(RISC).
+CISCs have many specialised instructions that the CPU rarely if ever needs to use. These run parrallel to the instructions that most programs would use frequently making it slower.
+RISCs allows those instructions that most programs don't use to be implemented as subroutines. What to do if the common instructions don't work.[4]
+
+References
+
+www.techopedia.com/defintion/26757/computer-architecture[1]
+www.cis.upenn.edu/~milom/cis501-Fall05/lectures/02_isa.pdf[2]
+www.wikipedia.org/wiki/Computer_architecture[3]
+en.wikipedia.org/wiki/Instruction_set[4]

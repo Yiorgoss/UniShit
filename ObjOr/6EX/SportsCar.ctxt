@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=weight\ horsepower\ aerodynamics\ topspeed\ carryweight
-comment0.target=SportsCar(double,\ double,\ double,\ double,\ double)
-comment1.params=
-comment1.target=double\ getTopSpeed()
-comment2.params=
-comment2.target=double\ consumption()
-numComments=3

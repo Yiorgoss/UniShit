@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=fname
+comment0.target=boolean\ isThereFile(java.lang.String)
+comment1.params=fname\ content
+comment1.target=void\ outFile(java.lang.String,\ java.lang.String)
+numComments=2
